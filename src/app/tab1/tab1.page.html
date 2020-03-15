@@ -55,7 +55,7 @@
 
 <ion-slides [options] = "slideOpts2">
   <ion-slide *ngFor = "let item of listProducts">
-    <ion-card >
+    <ion-card (click)="goPreview(item)">
       <!-- (click) = "goPreview(item)" -->
       <ion-card-header>
         <img src = "{{item.img}}">

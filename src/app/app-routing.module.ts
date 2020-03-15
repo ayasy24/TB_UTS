@@ -5,11 +5,11 @@ const routes: Routes = [
   {
     path: '',
     loadChildren: () => import('./tabs/tabs.module').then(m => m.TabsPageModule)
+  },
+  {
+    path: 'preview/:title',
+    loadChildren: () => import('./preview/preview.module').then( m => m.PreviewPageModule)
   }
-  // {
-  //   path: 'preview',
-  //   loadChildren: () => import('./preview/preview.module').then( m => m.PreviewPageModule)
-  // }
 ];
 @NgModule({
   imports: [

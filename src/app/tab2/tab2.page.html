@@ -38,6 +38,7 @@
         <ion-card-content>
           <h1>{{item.title}}</h1>
           <div>{{item.price | currency: 'Rp'}}</div>
+          <ion-button (click) = "hapus(item)" expand = "block" color = "danger">Hapus</ion-button>
         </ion-card-content>
       </ion-col>
 

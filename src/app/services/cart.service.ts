@@ -28,9 +28,17 @@ export class CartService {
     // });
     return this.items;
   }
-  clearCart() {
-    this.items = [];
-    this.storage.remove(KEY_CART);
-    return this.items;
-  }
+  // clearCart() {
+  //   this.items = [];
+  //   this.storage.remove(KEY_CART);
+  //   return this.items;
+  // }
+  
+  removeProduct(product) {
+    for(let [index, p] of this.items.entries()) {
+      if(p.title == product.title){
+        this.items.splice(index, 1);
+        }
+      }
+    }
 }

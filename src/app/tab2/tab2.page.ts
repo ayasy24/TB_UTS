@@ -34,8 +34,8 @@ export class Tab2Page implements OnInit {
     console.log('Lanjut Pembelian');
     this.router.navigate(['/pembelian']);
   }
-  kosongkan(){
-    this.cart.clearCart();
+  hapus(product){
+    this.cart.removeProduct(product);
     this.ambildata();
   }
 }

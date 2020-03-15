@@ -3,6 +3,7 @@ import { Router } from '@angular/router';
 import { CartService } from '../services/cart.service';
 import { UtilsService } from '../services/utils.service';
 import { products } from '../products';
+import { PhoneService }from "../services/phone.service";
 
 
 @Component({
@@ -29,7 +30,8 @@ export class Tab1Page {
 
   constructor(
     private cart: CartService,
-    private utils: UtilsService
+    private utils: UtilsService,
+    private router: Router
   ) {
     this.listProducts = products;
     console.log(products);
@@ -49,5 +51,10 @@ export class Tab1Page {
   // goPreview(item){
   //   this.router.navigate(['/preview/' + item]);
   // }
+
+  goPreview(phone) {
+    console.log('title = ' +phone.title);
+    this.router.navigate(['/preview/' + phone.title]);
+  }
 
   }

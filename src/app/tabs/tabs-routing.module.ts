@@ -37,17 +37,17 @@ const routes: Routes = [
           }
         ]
       },
-      {
-        path: 'preview/:item',
-        children: [
-          {
-            path: '',
-            loadChildren: () => 
-            import('../preview/preview.module').then( m => m.PreviewPageModule)
+      // {
+      //   path: 'preview',
+      //   children: [
+      //     {
+      //       path: '',
+      //       loadChildren: () => 
+      //       import('../preview/preview.module').then( m => m.PreviewPageModule)
 
-          }
-        ]
-      },
+      //     }
+      //   ]
+      // },
       {
         path: '',
         redirectTo: '/tabs/tab1',
